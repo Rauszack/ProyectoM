@@ -1,0 +1,43 @@
+[
+    { 
+       "id": "1",
+       "img": "./img/duende7.jpg",
+       "nombre":"Producto1",
+       "price": 500
+    },{ 
+       "id": "2",
+       "img": "./img/duende8.jpg",
+       "nombre":"Producto2",
+       "price": 500
+    },{ 
+       "id": "3",
+       "img": "./img/duende11.jpg",
+       "nombre":"Producto3",
+       "price": 700
+    },{ 
+        "id": "4",
+       "img": "./img/duende13.jpg",
+        "nombre":"Producto4",
+        "price": 700
+    },{ 
+        "id": "5",
+       "img": "./img/duende14.jpg",
+        "nombre":"Producto5",
+        "price": 900
+    },{ 
+        "id": "6",
+       "img": "./img/duende17.jpg",
+        "nombre":"Producto6",
+        "price": 900
+    },{ 
+        "id": "7",
+       "img": "./img/duende28.jpg",
+        "nombre":"Producto7",
+        "price": 1000
+    },{ 
+        "id": "8",
+       "img": "./img/grupo3.jpg",
+        "nombre":"Producto8",
+        "price": 1000
+    }
+]
