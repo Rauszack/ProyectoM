@@ -8,6 +8,7 @@ btnCart.addEventListener('click', () => {
 const cartInfo = document.querySelector('.cart-product')
 const rowProduct = document.querySelector('.row-product')
 
+
 const URL = 'productos.json'
 
 const productsList = document.querySelector('.container-items');
@@ -109,6 +110,7 @@ rowProduct.addEventListener('click', (e) => {
     }
 });
 
+
 // Función para mostrar el carrito
 const showHTML = () => {
     if (!allProducts.length) {
@@ -152,12 +154,21 @@ const showHTML = () => {
 
         total += parseInt(product.price.slice(1)) * parseInt(product.quantity);
         totalOfProducts += parseInt(product.quantity);
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: 'Producto agregado al carrito',
+            text: `${product.title} ha sido agregado al carrito.`,
+            showConfirmButton: false,
+            timer: 1500
+          });
+
     });
 
     totalPagar.innerText = `$${total}`;
     countProducts.innerText = totalOfProducts;
 
-    // Botón de "Realizar Compra" global
     const purchaseButton = document.querySelector('.purchase-button');
     if (!purchaseButton && allProducts.length > 0) {
         const purchaseButton = document.createElement('button');
@@ -165,9 +176,7 @@ const showHTML = () => {
         purchaseButton.textContent = 'REALIZAR COMPRA';
         containerCartProducts.appendChild(purchaseButton);
 
-        // Acción de "Realizar Compra" para todos los productos del carrito
         purchaseButton.addEventListener('click', () => {
-            // Aquí iría la lógica para procesar la compra de todos los productos del carrito
             console.log('Compra realizada para todos los productos del carrito.');
         });
     } else if (purchaseButton && allProducts.length === 0) {
@@ -175,7 +184,6 @@ const showHTML = () => {
     }
 };
 
-// Llamada a la función para mostrar el carrito
 showHTML();
 
 cargarProductos();

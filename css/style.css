@@ -132,7 +132,7 @@ header {
 .container-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
+    row-gap: 20px;
     column-gap: 10px;
     padding: 5px;
 }
